@@ -7,6 +7,10 @@
     <br><br>
 
     <question2/>
+
+    <br><br>
+
+    <question3/>
   </div>
 </template>
 
@@ -14,13 +18,15 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import question1 from "./views/question1";
 import question2 from "./views/question2";
+import question3 from "./views/question3";
 
 export default {
   name: 'app',
   components: {
     // HelloWorld,
     question1,
-    question2
+    question2,
+    question3
   }
 }
 </script>
