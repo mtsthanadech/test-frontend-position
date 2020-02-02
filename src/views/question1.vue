@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- The original JSON array-->
-    <div v-for="(customer, index) in customers" :key="index">
+    <div v-for="(customer, index) in customers" :key="'original'+index">
       {{customer}}
     </div>
 
     <br><br>
-    <!-- Sort the JSON array and print out the sentence-->
-    <div v-for="(customer, index) in sortCustomers(customers)" :key="index">
 
+    <!-- Sort the JSON array and print out the sentence-->
+    <div v-for="(customer, index) in (customers)" :key="'sort'+index">
       <!-- First Letter Uppercase function-->
       {{firstLetterUppercase(customer.name)}} want to buy
       <template v-for="(car, carIndex) in customer.cars">
@@ -57,6 +57,9 @@
         // Make the first letter of string to uppercase.
         return string.charAt(0).toUpperCase() + string.slice(1);
       }
+    },
+    created() {
+      this.customers = this.sortCustomers(this.customers)
     }
   }
 </script>
