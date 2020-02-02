@@ -11,6 +11,10 @@
     <br><br>
 
     <question3/>
+
+    <br><br>
+
+    <question4/>
   </div>
 </template>
 
@@ -19,6 +23,7 @@
 import question1 from "./views/question1";
 import question2 from "./views/question2";
 import question3 from "./views/question3";
+import question4 from "./views/question4";
 
 export default {
   name: 'app',
@@ -26,7 +31,8 @@ export default {
     // HelloWorld,
     question1,
     question2,
-    question3
+    question3,
+    question4
   }
 }
 </script>
