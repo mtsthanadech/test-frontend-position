@@ -6,6 +6,7 @@
     :posts="user.posts"
     :likes="user.likes"
     :followers="user.followers"/>
+  <!-- Send property from parent component(question4_1) to child component(profile) -->
 </template>
 
 <script>
