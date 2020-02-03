@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- The original JSON array-->
-    <div v-for="(customer, index) in customers" :key="'original'+index">
+    <div v-for="(customer, index) in originalCustomers" :key="'original'+index">
       {{customer}}
     </div>
 
@@ -29,6 +29,20 @@
     data() {
       return {
         // The original JSON array
+        originalCustomers: [
+          {
+            name: "rick",
+            cars: ["Corvette Z06", "Lotus Exite S"],
+          },
+          {
+            name: "john",
+            cars: ["BMW 320D"],
+          },
+          {
+            name: "zing",
+            cars: ["​Honda Jazz", "Honda Click", "Honda Waves"],
+          }
+        ],
         customers: [
           {
             name: "rick",
